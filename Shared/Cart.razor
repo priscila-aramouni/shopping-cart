@@ -1,0 +1,24 @@
+﻿@using MiniCart.Models
+@code {
+    [Parameter] public List<Product> CartItems { get; set; } = new();
+    [Parameter] public EventCallback<Product> RemoveFromCart { get; set; }
+}
+
+<h3>🛒 Cart</h3>
+@if (CartItems.Any())
+{
+    <ul>
+        @foreach (var item in CartItems)
+        {
+            <li>
+                @item.Name - $@item.Price
+                <button @onclick="() => RemoveFromCart.InvokeAsync(item)">Remove</button>
+            </li>
+        }
+    </ul>
+    <p><strong>Total:</strong> $@CartItems.Sum(p => p.Price)</p>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}

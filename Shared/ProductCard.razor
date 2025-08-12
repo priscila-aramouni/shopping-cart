@@ -1,0 +1,11 @@
+﻿@using MiniCart.Models
+@code {
+    [Parameter] public Product Product { get; set; } = new();
+    [Parameter] public EventCallback<Product> AddToCart { get; set; }
+}
+
+<div class="card">
+    <h4>@Product.Name</h4>
+    <p>Price: $@Product.Price</p>
+    <button @onclick="() => AddToCart.InvokeAsync(Product)">Add to Cart</button>
+</div>

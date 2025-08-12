@@ -1,0 +1,37 @@
+﻿@page "/"
+@using MiniCart.Models
+@using MiniCart.Shared
+@using System.Linq
+
+<h3>🛍 Products</h3>
+<div class="product-list">
+    @foreach (var product in Products)
+    {
+        <ProductCard Product="product" AddToCart="AddToCart" />
+    }
+</div>
+
+<br />
+
+<Cart CartItems="Cart" RemoveFromCart="RemoveFromCart" />
+
+@code {
+    List<Product> Products = new()
+    {
+        new Product { Id = 1, Name = "Apple", Price = 1.00M },
+        new Product { Id = 2, Name = "Banana", Price = 0.50M },
+        new Product { Id = 3, Name = "Orange", Price = 0.75M },
+    };
+
+    List<Product> Cart = new();
+
+    void AddToCart(Product product)
+    {
+        Cart.Add(product);
+    }
+
+    void RemoveFromCart(Product product)
+    {
+        Cart.Remove(product);
+    }
+}

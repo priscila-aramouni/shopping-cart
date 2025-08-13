@@ -7,5 +7,8 @@
 <div class="card">
     <h4>@Product.Name</h4>
     <p>Price: $@Product.Price</p>
-    <button @onclick="() => AddToCart.InvokeAsync(Product)">Add to Cart</button>
+    <button @onclick="() => AddToCart.InvokeAsync(Product)"
+            disabled="@(Product.IsAvailable ? null : true)">
+        Add to Cart
+    </button>
 </div>

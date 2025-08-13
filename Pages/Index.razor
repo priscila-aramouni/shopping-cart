@@ -13,6 +13,9 @@
 
 <br />
 
+<!-- Add this feedback display -->
+<div data-testid="ui-feedback" aria-live="polite">@Feedback</div>
+
 <Cart CartItems="Cart" RemoveFromCart="RemoveFromCart" />
 
 @code {
@@ -21,17 +24,23 @@
         new Product { Id = 1, Name = "Apple", Price = 1.00M },
         new Product { Id = 2, Name = "Banana", Price = 0.50M },
         new Product { Id = 3, Name = "Orange", Price = 0.75M },
+        // New: unavailable product example
+        new Product { Id = 99, Name = "Grapes", Price = 2.00M, IsAvailable = false }
     };
 
     List<Product> Cart = new();
+    string Feedback = "";
 
     void AddToCart(Product product)
     {
+        if (!product.IsAvailable) return;
         Cart.Add(product);
+        Feedback = $"Added {product.Name}";
     }
 
     void RemoveFromCart(Product product)
     {
         Cart.Remove(product);
+        Feedback = $"Removed {product.Name}";
     }
 }

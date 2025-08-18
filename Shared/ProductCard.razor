@@ -7,8 +7,10 @@
 <div class="card">
     <h4>@Product.Name</h4>
     <p>Price: $@Product.Price</p>
-    <button @onclick="() => AddToCart.InvokeAsync(Product)"
-            disabled="@(Product.IsAvailable ? null : true)">
+    <button data-testid="add-@Product.Id"
+            @onclick="() => AddToCart.InvokeAsync(Product)"
+            disabled="@(!Product.IsAvailable)">
         Add to Cart
     </button>
+
 </div>

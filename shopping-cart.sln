@@ -5,7 +5,7 @@ VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCart", "MiniCart.csproj", "{FAD5523A-831B-459A-87B9-42C0C3EEF20D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCart.Tests", "..\MiniCart.Tests\MiniCart.Tests.csproj", "{3BDDC5DC-6567-4F30-B0C4-8917C7F0A366}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCart.Tests", "tests\MiniCart.Tests\MiniCart.Tests.csproj", "{562CA912-701E-83F3-F2D6-0624944716CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{FAD5523A-831B-459A-87B9-42C0C3EEF20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAD5523A-831B-459A-87B9-42C0C3EEF20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAD5523A-831B-459A-87B9-42C0C3EEF20D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3BDDC5DC-6567-4F30-B0C4-8917C7F0A366}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BDDC5DC-6567-4F30-B0C4-8917C7F0A366}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BDDC5DC-6567-4F30-B0C4-8917C7F0A366}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BDDC5DC-6567-4F30-B0C4-8917C7F0A366}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562CA912-701E-83F3-F2D6-0624944716CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562CA912-701E-83F3-F2D6-0624944716CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562CA912-701E-83F3-F2D6-0624944716CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562CA912-701E-83F3-F2D6-0624944716CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
